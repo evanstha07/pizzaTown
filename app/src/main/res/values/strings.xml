@@ -12,4 +12,18 @@
     <string name="selected_ingridents"> your Selected Ingredients </string>
     <string name="back"> GO Back </string>
     <string name="confirm"> Confirm </string>
+
+    <string-array name="pizzaTypes">
+        <item name = "small_size">Small</item>
+        <item name = "medium_size">Medium</item>
+        <item name = "large_size">Large</item>
+        <item name = "exlarge_size">Extra Large</item>
+        <item name = "family_size">Family Pack</item>
+
+
+
+
+
+    </string-array>
+
 </resources>

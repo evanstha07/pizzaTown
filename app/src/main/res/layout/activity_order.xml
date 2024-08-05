@@ -81,9 +81,17 @@
         android:textStyle="bold"
         />
 
+    <Spinner
+        android:id="@+id/pizzaType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/btnsLayout"

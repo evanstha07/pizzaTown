@@ -2,6 +2,9 @@ package edu.learn.pizzatown;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -9,6 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -140,4 +144,55 @@ public class MainActivity extends AppCompatActivity {
         //finish oncreate
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+
+        inflater.inflate(R.menu.first_option_menu,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.choice1:
+
+                checkboxCheese.setChecked(true);
+                checkboxMushroom.setChecked(true);
+                checkboxTomato.setChecked(true);
+                checkboxBasil.setChecked(false);
+                checkboxOlive.setChecked(false);
+                checkboxPineapple.setChecked(false);
+
+                return true;
+
+            case R.id.choice2:
+
+                checkboxCheese.setChecked(true);
+                checkboxMushroom.setChecked(false);
+                checkboxTomato.setChecked(true);
+                checkboxBasil.setChecked(false);
+                checkboxOlive.setChecked(false);
+                checkboxPineapple.setChecked(true);
+
+                return true;
+
+            case R.id.choice3:
+
+                checkboxCheese.setChecked(true);
+                checkboxMushroom.setChecked(false);
+                checkboxTomato.setChecked(true);
+                checkboxBasil.setChecked(true);
+                checkboxOlive.setChecked(true);
+                checkboxPineapple.setChecked(false);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+    }
 }
